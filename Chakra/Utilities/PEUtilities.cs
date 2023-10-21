@@ -27,7 +27,6 @@ namespace Chakra.Utilities
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="X64Binaries"></param>
         /// <param name="folderInfo"></param>
         /// <returns></returns>
         private static (uint X64Binaries, uint arm64xBinaries) CountArm64xPeFilesInDirectory(DirectoryInfo folderInfo)
@@ -61,11 +60,9 @@ namespace Chakra.Utilities
         }
 
         /// <summary>
-        /// test
+        /// 
         /// </summary>
-        /// <param name="isAmd64"></param>
-        /// <param name="isArm64x"></param>
-        /// <param name="path">Path to binary file</param>
+        /// <param name="path"></param>
         /// <returns></returns>
         public static (uint isAmd64, uint isArm64x) CheckPeFileMachineType(string path)
         {

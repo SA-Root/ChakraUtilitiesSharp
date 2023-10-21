@@ -2,11 +2,9 @@ namespace Chakra.Utilities
 {
     class MusicUtilities
     {
-        static void CleanupMusicFolder(string playlistsPath = @"C:\Users\a1240\OneDrive\公开\Playlists")
+        public static void CleanupMusicFolder(List<string> targetPaths,
+            string playlistsPath = @"C:\Users\a1240\OneDrive\公开\Playlists")
         {
-            var TargetPaths = new List<string>{
-                @"D:\Data\Music\Genshin Impact OST\OST17",
-            };
             var InPlaylist = new List<string>();
             var NotInPlaylist = new List<string>();
 
@@ -36,7 +34,7 @@ namespace Chakra.Utilities
                             InPlaylist.Add(song);
                     }
                 }
-                foreach (var path in TargetPaths)
+                foreach (var path in targetPaths)
                 {
                     var ndi = new DirectoryInfo(path);
                     CheckDirectory(ndi);
