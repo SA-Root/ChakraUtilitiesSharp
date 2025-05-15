@@ -8,6 +8,8 @@ internal class NugetCleaner
         Parallel.ForEach(di.GetDirectories(), dir =>
         {
             var subDir = dir.GetDirectories();//versions
+            if (subDir.Length == 0)
+                return;
             foreach (var i in Enumerable.Range(0, subDir.Length - 1))
             {
                 Directory.Delete(subDir[i].FullName, true);
