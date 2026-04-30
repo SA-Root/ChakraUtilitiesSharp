@@ -6,6 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PublishAOT>true</PublishAOT>
+    <Version>1.1.2604.0</Version>
+    <FileVersion>1.1.2604.0</FileVersion>
+    <Company>Advanced Prototype Dynamics</Company>
+    <Copyright>Advanced Prototype Dynamics© 2026</Copyright>
+
+    <Product>Nuget Package History Version Cleaner</Product>
+    <Title>Nuget Package History Version Cleaner</Title>
   </PropertyGroup>
 
 </Project>

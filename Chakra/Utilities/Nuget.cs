@@ -4,8 +4,6 @@ internal class NugetCleaner : IComparer<string>
 {
     public static NugetCleaner Instacne { get; } = new();
 
-
-
     public static int CleanupNugetFolder(string path)
     {
         var di = new DirectoryInfo(path);
@@ -19,6 +17,7 @@ internal class NugetCleaner : IComparer<string>
                     return;
                 for (int i = 0; i < subDir.Length - 1; i++)
                 {
+                    if(!subDir[i].Name.Contains('-'))//pre-release
                     subDir[i].Delete(true);
                 }
                 Console.WriteLine($"Cleaned: {dir.Name}");
